@@ -1,16 +1,16 @@
 <template>
     <div class="about_c">
         <h2>About me</h2>
-     <p class="text_about">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, natus. Dolorem quidem maiores dolores, hic laudantium cumque nihil perferendis saepe, soluta repellat praesentium, ratione tenetur quas odio modi illo sequi.</p>   
+    <p class="text_about">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, natus. Dolorem quidem maiores dolores, hic laudantium cumque nihil perferendis saepe, soluta repellat praesentium, ratione tenetur quas odio modi illo sequi.</p>   
     <ul class="menu_about">
-        <li>Experience</li>
-        <li>Education</li>
-        <li>Skills</li>
-        <li>Social</li>
+        <router-link to="experience">Experience</router-link>
+        <router-link to="education">Education</router-link>
+        <router-link to="skills">Skills</router-link>
+        <router-link to="social">Social</router-link>
     </ul>
-    <div class="routerview">
+    <router-view class="routerview" >
 
-    </div>
+    </router-view>
 
     </div>
 </template>
@@ -52,10 +52,10 @@
     background-color: rgb(227, 227, 227);
     transition: .3s all ease-in;
 }
-.menu_about li:hover{
+/* .menu_about li:hover{
     text-decoration: underline;
     cursor: pointer;
-}
+} */
 h2{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 45px;
