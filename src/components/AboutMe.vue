@@ -2,16 +2,6 @@
     <div class="about_c">
         <h2>About me</h2>
     <p class="text_about">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, natus. Dolorem quidem maiores dolores, hic laudantium cumque nihil perferendis saepe, soluta repellat praesentium, ratione tenetur quas odio modi illo sequi.</p>   
-    <ul class="menu_about">
-        <router-link to="experience">Experience</router-link>
-        <router-link to="education">Education</router-link>
-        <router-link to="skills">Skills</router-link>
-        <router-link to="social">Social</router-link>
-    </ul>
-    <router-view class="routerview" >
-
-    </router-view>
-
     </div>
 </template>
 
@@ -21,14 +11,21 @@
 
 
 <style scoped>
+*{
+    margin: 0px!important;
+    padding: 0px!important;
+}
 .about_c{
-    width: 100%;
-    min-height: 600px;
-    margin-top: 50px;
-    background-color: rgb(233, 232, 232);
+    width: 95%;
+    border-radius: 45px;
+    height: 300px;
+    margin-bottom: 26px!important;
+    margin-top: 26px!important;
+    background-color: #212121;
     display: flex;
     align-items: center;
     flex-direction: column;
+    box-shadow: 2px 4px 13px 0px rgba(0,0,0,0.75);
 }
 .routerview{
     width: 100%;
@@ -57,12 +54,12 @@
     cursor: pointer;
 } */
 h2{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Jaldi', sans-serif;
     font-size: 45px;
-    color: rgb(64, 64, 64);
+color: rgb(234, 234, 234);
     text-align: center;
     position: relative;
-    top: 50px;
+    top: 20px;
 
 }
 .text_about{
@@ -72,6 +69,9 @@ h2{
     padding: 40px;
     border-radius: 8px;
     align-self: center;
-    border: 2px solid grey;
+    font-family: 'Jaldi', sans-serif;
+    letter-spacing: 2px;
+    color: white;
+    margin-top: 20px!important;
 }
 </style>

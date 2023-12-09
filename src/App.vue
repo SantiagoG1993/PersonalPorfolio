@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app">
     <NavBar />
     <PresentationProfile />
     <AboutMe />
@@ -19,5 +19,15 @@ import SocialMedia from './components/SocialMedia.vue'
 </script>
 
 <style scoped>
-
+*{
+  margin: 0px!important;
+  padding: 0px!important;
+}
+.app{
+/* background-color: rgb(107, 106, 106); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
 </style>

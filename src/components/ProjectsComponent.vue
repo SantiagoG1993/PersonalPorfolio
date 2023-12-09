@@ -1,50 +1,75 @@
 <template>
     <div class="projects_c">
-        <h3>Projects</h3>
         <ul class="menu">
-            <li>Front end</li>
-            <li>Full Stack</li>
+            <li @click="option='projects' " >Projects</li>|
+            <li @click="option='education'">Education</li>|
+            <li @click="option='skills'">Skills</li>
         </ul>
+        <div v-if="option == 'projects'" class="container projects ">
+            <div class="project_card">
 
+            </div>
+            <div class="project_card">
+
+            </div>
+            <div class="project_card">
+
+            </div>
+        </div>
+        <div v-if="option == 'education'" class="container education">
+            <p>education</p>
+        </div>
+        <div v-if="option == 'skills'" class="container skills">
+            <p>skills</p>
+        </div>
     </div>
 </template>
 
 <script setup>
+import {ref} from 'vue'
+const option = ref('projects')
 
 </script>
 
 <style scoped>
+.container{
+    width: 90%;
+    height: 70%;
+
+}
 .projects_c{
-    width: 100%;
-    height: 400px;
-    background-color: rgb(2, 87, 126);
+    width: 95%;
+    height: 500px;
+    background-color: #1C1C1C;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 45px;
 }
 .menu{
+    margin-top: 20px;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-size: 20px;
     display: flex;
-    gap: 30px;
-    font-size: 28px;
-    font-family: Arial, Helvetica, sans-serif;
     list-style-type: none;
-    justify-content: center;
-    border-radius: 8px;
-    border: 2px solid rgb(225, 225, 225);
-    padding: 10px;
-    margin-top: 0px;
-    width: 300px;
-    color: white;
+    gap: 10px;
+    color: rgb(192, 192, 192);
 }
 .menu li:hover{
-    text-decoration: underline;
+    color: grey;
     cursor: pointer;
 }
-h3{
-    font-size: 45px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(226, 226, 226);
-    margin:30px ;
+.projects{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.project_card{
+    border: 1px solid white;
+    width: 320px;
+    height: 320px;
 }
 </style>
